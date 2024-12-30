@@ -38,7 +38,10 @@ body{
     
     background-image: url(../images/background\ dasar.png);
     background-size: cover;
-    position:fixed;
+    background-attachment: fixed;
+    background-attachment: -webkit-fixed; /* Menambahkan prefix untuk Safari */
+    background-repeat: no-repeat;
+
 }
 
 
