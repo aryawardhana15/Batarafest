@@ -260,11 +260,12 @@ section{
 }
 
 .about .row .content p {
-    font-size: 1.5rem;
-    color: #fff;
+    
+    color: #ffffff;
     line-height: 2;
     padding: 1rem 0;
 }
+
 
 /* Media Query untuk Responsivitas pada Tablet dan Mobile */
 @media (max-width: 1024px) {
