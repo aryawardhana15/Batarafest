@@ -1,0 +1,102 @@
+body {
+    background-color: #042a2b;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+.hero {
+    background-color: rgba(136, 249, 234, 0.5);
+    padding: 20px;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+}
+
+.timeline {
+    margin: 50px auto;
+    width: 80%;
+}
+
+.heading {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #00d9b2;
+    margin-bottom: 30px;
+}
+
+.timeline-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, #00d9b2, #008080);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+.timeline-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #00d9b2, #008080);
+    position: absolute;
+    left: -15px;
+}
+
+.timeline-content {
+    background-color: #004d40;
+    color: #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    width: 75%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.timeline-content h3 {
+    font-size: 1.6rem;
+    color: #00d9b2;
+}
+
+.timeline-item:hover .timeline-content {
+    background-color: #00d9b2;
+    color: #ffffff;
+}
+
+.btn.custom-button,
+.btnkembali {
+    display: inline-block;
+    background-color: #00bfa5;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn.custom-button:hover,
+.btnkembali:hover {
+    background-color: #00695c;
+}

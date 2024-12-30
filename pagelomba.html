@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BATARAFEST 2024</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(./images/background\ dasar.png);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        header {
+            background: rgba(26, 139, 120, 0.9);
+            text-align: center;
+            padding: 50px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            border-bottom: 5px solid #ffcc00;
+            animation: fadeIn 1s ease-out;
+        }
+        header h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        header p {
+            font-size: 1.5rem;
+            margin: 10px 0 0;
+            font-style: italic;
+            color: #ffcc00;
+        }
+        .container {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            animation: fadeIn 1s ease-out;
+        }
+        section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+            animation: slideUp 1s ease-out;
+        }
+        section:hover {
+            transform: translateY(-5px);
+        }
+        section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            border-bottom: 3px solid #ffcc00;
+            display: inline-block;
+            color: #ffcc00;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 10px 0;
+        }
+        .highlight {
+            color: #ffcc00;
+        }
+        .timeline ul {
+            padding-left: 20px;
+            list-style: square;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #1a8b78;
+            color: #fff;
+            font-size: 1.1rem;
+        }
+        .interactive-tabs {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .tab {
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 8px;
+            padding: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            color: #fff;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+        .tab:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .tab.active {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+            color: #ffcc00;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        .tab-content {
+            display: none;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        
+        .btnkembali {
+        display: inline-block;
+        margin-top: 20px;
+        background-color: #ffcc00;  /* Warna latar belakang */
+        color: #ffffff;  /* Teks putih */
+        padding: 12px 30px;  /* Ukuran padding */
+        border-radius: 12px;  /* Membuat button lebih bulat */
+        font-size: 1.2rem;  /* Ukuran teks */
+        text-decoration: none;  /* Menghapus garis bawah */
+        text-align: center;  /* Rata tengah */
+        transition: all 0.3s ease;  /* Animasi transisi */
+        font-weight: bold;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);  /* Bayangan halus */
+    }
+
+    .btnkembali:hover {
+        background-color: #00695c;  /* Warna latar belakang saat hover */
+        transform: scale(1.05);  /* Efek zoom saat hover */
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);  /* Bayangan lebih besar */
+    }
+
+    .btnkembali:active {
+        transform: scale(0.98);  /* Efek tekan */
+    }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+            section h2 {
+                font-size: 2rem;
+            }
+            .container {
+                padding: 20px;
+            }
+        }
+        /* Fix text color for white background sections */
+        section p, ul li, .tab-content {
+            color: #333;  /* Darker color for better contrast */
+        }
+        .btn-primary {
+            color: #333;  /* Dark button text */
+        }
+        /* Add padding to section elements for better spacing */
+        section {
+            padding: 30px 20px;
+        }
+        /* Reduce margin between section titles */
+        section h2 {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BATARAFEST 2024</h1>
+        <p><span class="highlight">"Abhipraya Parwati Budhaya"</span> - Harapan Membangkitkan Semangat Budaya</p>
+    </header>
+    <div class="container">
+        <section>
+            <h2>Informasi Acara</h2>
+            <p><strong>Tanggal Acara:</strong> 13 November 2024</p>
+            <p><strong>Lokasi:</strong> Kota Malang</p>
+            <p><strong>Contact Person:</strong> +62 896-8159-4879 (Mbak Desyka)</p>
+        </section>
+        <section>
+            <h2>Tujuan Acara</h2>
+            <div class="interactive-tabs">
+                <div class="tab">Lihat Tujuan Acara</div>
+                <div class="tab-content">
+                    <ul>
+                        <li>Menumbuhkan kecintaan anak-anak terhadap budaya Jawa Timur.</li>
+                        <li>Melatih kemampuan seni anak-anak dalam bidang menyanyi, menari, dan mendongeng.</li>
+                        <li>Meningkatkan rasa percaya diri anak-anak dalam menampilkan karya seni.</li>
+                        <li>Melestarikan budaya Jawa Timur dengan mengenalkan tradisi dan kesenian daerah.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Kategori Lomba</h2>
+            <div class="interactive-tabs">
+                <div class="tab">Lomba Mendongeng</div>
+                <div class="tab-content">
+                    <p><strong>Tema:</strong> Lestarikan Budaya Jawa Timur melalui Dongeng</p>
+                    <ul>
+                        <li>Legenda dan mitos dari Jawa Timur.</li>
+                        <li>Cerita rakyat yang mengandung nilai budaya dan moral.</li>
+                        <li>Tradisi dan adat istiadat khas Jawa Timur.</li>
+                    </ul>
+                </div>
+                <div class="tab">Lomba Menari</div>
+                <div class="tab-content">
+                    <p><strong>Tema:</strong> Lestarikan Budaya Jawa Timur melalui Tari Tradisional/Kreasi</p>
+                    <ul>
+                        <li>Peserta: Kelompok (2-7 orang).</li>
+                        <li>Durasi maksimal: 7 menit.</li>
+                        <li>Kostum dan properti wajib.</li>
+                    </ul>
+                </div>
+                <div class="tab">Lomba Menyanyi</div>
+                <div class="tab-content">
+                    <p><strong>Tema:</strong> Lestarikan Budaya melalui Lagu Tradisional</p>
+                    <ul>
+                        <li>Lagu wajib: "Rek Ayo Rek"</li>
+                        <li>Lagu tradisional pilihan: "Cublak Cublak Suweng", "Tanduk Majeng", "Suwe Ora Jamu", "Kidang Talun"</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Proses Pendaftaran</h2>
+            <div class="interactive-tabs">
+                <div class="tab">Detail Pendaftaran</div>
+                <div class="tab-content">
+                    <ol>
+                        <li><strong>Biaya Pendaftaran:</strong>
+                            <ul>
+                                <li>Mendongeng: Rp75.000</li>
+                                <li>Menari: Rp150.000</li>
+                                <li>Menyanyi: Rp75.000</li>
+                            </ul>
+                        </li>
+                        <li><strong>Pendaftaran Online:</strong> Formulir: <a href="https://bit.ly/PENDAFTARANLOMBABATARAFEST24" target="_blank" class="btn-primary">Klik di sini</a></li>
+                        <li><strong>Pengiriman Karya:</strong> Upload karya melalui <a href="https://linktr.ee/BATARAFEST2024" target="_blank" class="btn-primary">Linktree BATARAFEST 2024</a></li>
+                        <li><strong>Konfirmasi Pendaftaran:</strong> Hubungi Mbak Desyka (+62 896-8159-4879)</li>
+                    </ol>
+                </div>
+            </div>
+
+
+        </section>
+        <button class="btnkembali"><a href="index.html">Kembali</a></button>
+    </div>
+    <footer>
+        <p>&copy; 2024 BATARAFEST | Duta Budaya Jawa Timur</p>
+    </footer>
+    <script>
+        const tabs = document.querySelectorAll('.tab');
+        const contents = document.querySelectorAll('.tab-content');
+
+        tabs.forEach((tab, index) => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                contents.forEach(c => c.classList.remove('active'));
+
+                tab.classList.add('active');
+                contents[index].classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

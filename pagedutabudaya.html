@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemilihan Duta Budaya</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url(./images/background\ dasar.png);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .hero {
+            background-image: url(./images/background\ dasar.png);
+            padding: 50px 20px;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 15px;
+            animation: slideUp 1s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+        .timeline {
+    margin: 50px auto;
+    width: 90%;
+    max-width: 1000px;
+    padding: 20px;
+}
+
+.heading {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: 600;
+}
+
+.timeline-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-left: 20px;
+}
+
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 217, 178, 0.8), rgba(0, 128, 128, 0.8)); /* Transparansi pada garis */
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.timeline-item:hover {
+    transform: translateX(10px);
+    opacity: 0.9;
+}
+
+.timeline-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, rgba(0, 217, 178, 0.8), rgba(0, 128, 128, 0.8)); /* Transparansi pada ikon */
+    position: absolute;
+    left: -20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+}
+
+.timeline-item:hover .timeline-icon {
+    background: rgba(0, 105, 92, 0.8); /* Transparansi pada ikon saat hover */
+}
+
+.timeline-content {
+    background-color: rgba(0, 77, 64, 0.8); /* Transparansi pada konten */
+    color: #ddd;
+    padding: 40px;
+    border-radius: 8px;
+    width: 75%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.timeline-content h3 {
+    font-size: 1.7rem;
+    color: #00d9b2;
+    margin-bottom: 15px;
+}
+
+
+
+        .btn.custom-button {
+            display: inline-block;
+            background-color: #00bfa5;
+            color: #ffffff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 0.7rem;
+        }
+
+        .btn.custom-button:hover {
+            background-color: #00695c;
+        }
+
+        .btnkembali {
+            display: inline-block;
+            margin-top: 50px;
+            margin-left: 30px;
+            background-color: #2e9867;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 1.1rem;
+            transition: background 0.3s ease;
+        }
+
+        .btnkembali:hover {
+            background-color: #222;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div>
+            <h1>Selamat Datang di Pemilihan Duta Budaya Cilik Jawa Timur!</h1>
+            <p>Ajang bergengsi untuk menemukan bakat muda dalam melestarikan seni dan budaya Jawa Timur.</p>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline">
+        <h2 class="heading">Jalur Pemilihan Duta Budaya</h2>
+        <div class="timeline-container">
+            <!-- Timeline Item 1 -->
+            <div class="timeline-item">
+                <div class="timeline-icon"></div>
+                <div class="timeline-content">
+                    <h3>Pendaftaran</h3>
+                    <p>Pendaftaran dibuka dari tanggal <strong>2 Desember 2024</strong> hingga <strong>4 Januari 2025</strong>. Berikut persyaratan peserta:</p>
+                    <ul>
+                        <li>Domisili Jawa Timur</li>
+                        <li>Peserta berumur 7-14 tahun</li>
+                        <li>Mampu berbahasa Indonesia dengan baik dan benar</li>
+                        <li>Berpenampilan menarik, cerdas, berbakat, komunikatif, dan kreatif</li>
+                        <li>Follow Instagram <a href="https://instagram.com/dutabudayajawatimur" target="_blank">@dutabudayajawatimur</a></li>
+                        <li>Mengunggah Twibbon dan menandai Duta Budaya Jawa Timur di Instagram</li>
+                        <li>Membuat video perkenalan:</li>
+                        <ul>
+                            <li>Durasi minimal 1 menit</li>
+                            <li>Menjelaskan data diri seperti nama, domisili, umur, dan asal sekolah</li>
+                            <li>Memperkenalkan kebudayaan asal</li>
+                            <li>Tag Instagram <a href="https://instagram.com/dutabudayajawatimur" target="_blank">@dutabudayajawatimur</a></li>
+                        </ul>
+                    </ul>
+                    <p>Untuk melakukan pendaftaran, silahkan klik tombol di bawah ini.</p>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe1OiqjvkTTebhwsTwmlh2USmWLtD5WWf9wNltEmPL0NDwTHg/viewform" class="btn custom-button">Daftar Sekarang</a>
+                </div>
+            </div>
+
+            <!-- Timeline Item 2 -->
+            <div class="timeline-item">
+                <div class="timeline-icon"></div>
+                <div class="timeline-content">
+                    <h3>Seleksi Video dan Pemberkasan</h3>
+                    <p>Proses seleksi video dan pemberkasan akan dilakukan pada <strong>4-5 Januari 2025</strong>. Pastikan peserta mengunggah video perkenalan dengan syarat yang telah disebutkan sebelumnya, serta mengumpulkan dokumen sesuai petunjuk yang telah diberikan.</p>
+                </div>
+            </div>
+
+            <!-- Timeline Item 3 -->
+            <div class="timeline-item">
+                <div class="timeline-icon"></div>
+                <div class="timeline-content">
+                    <h3>Pengumuman Finalis</h3>
+                    <p>Pengumuman finalis akan dilakukan pada <strong>6 Januari 2025</strong>. Pastikan untuk memeriksa pengumuman melalui akun Instagram resmi Duta Budaya Jawa Timur.</p>
+                </div>
+            </div>
+
+            <!-- Timeline Item 4 -->
+            <div class="timeline-item">
+                <div class="timeline-icon"></div>
+                <div class="timeline-content">
+                    <h3>TM Karantina dan TM Grand Final</h3>
+                    <p>Technical Meeting (TM) untuk karantina dan grand final akan berlangsung pada <strong>8 Januari 2025</strong>. Seluruh finalis diharapkan hadir untuk mendapatkan briefing dan informasi lebih lanjut.</p>
+                </div>
+            </div>
+
+            <!-- Timeline Item 5 -->
+            <div class="timeline-item">
+                <div class="timeline-icon"></div>
+                <div class="timeline-content">
+                    <h3>Karantina</h3>
+                    <p>Proses karantina peserta akan dilaksanakan pada tanggal <strong>17-18 Januari 2025</strong>. Selama karantina, peserta akan mendapatkan pembekalan budaya secara intensif serta melaksanakan berbagai latihan.</p>
+                </div>
+            </div>
+
+            <!-- Timeline Item 6 -->
+            <div class="timeline-item">
+                <div class="timeline-icon"></div>
+                <div class="timeline-content">
+                    <h3>Grand Final</h3>
+                    <p>Grand Final akan diselenggarakan pada <strong>19 Januari 2025</strong>. Pastikan Anda menyaksikan momen spektakuler ini untuk melihat siapa yang akan terpilih sebagai Duta Budaya Cilik Jawa Timur!</p>
+                </div>
+            </div>
+        </div>
+
+        <a href="index.html" class="btnkembali">Kembali ke Halaman Utama</a>
+    </section>
+</body>
+</html>
