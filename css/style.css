@@ -34,16 +34,30 @@ html::-webkit-scrollbar-thumb{
     border-radius: 5rem;
 }
 
-body{
-    
+
+
+
+
+.background-container {
+    position: fixed; /* Background tetap */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: url(../images/background\ dasar.png);
     background-size: cover;
-    background-attachment: fixed;
-    background-attachment: -webkit-fixed; /* Menambahkan prefix untuk Safari */
     background-repeat: no-repeat;
-
+    background-position: center;
+ 
 }
 
+.content {
+    position: relative;
+    z-index: 1; /* Agar di atas background */
+    padding: 2rem;
+    font-size: 1.5rem;
+    color: #fff;
+}
 
 
 
@@ -228,8 +242,7 @@ section{
     max-width: 100%; /* Gambar tetap responsif */
     height: auto; /* Menjaga proporsi gambar */
     border-radius: .5rem;
-    border: 1rem solid #333;
-    padding: 1rem;
+    border: 0.7rem solid #333;
     object-fit: cover; /* Memastikan gambar terpotong dengan rapi jika perlu */
 }
 
