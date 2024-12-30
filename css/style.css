@@ -34,14 +34,13 @@ html::-webkit-scrollbar-thumb{
     border-radius: 5rem;
 }
 
-body{
-    
-    background-image: url(../images/background\ dasar.png);
-    background-size: cover;
-    background-attachment: fixed;
-    background-attachment: -webkit-fixed; /* Menambahkan prefix untuk Safari */
-    background-repeat: no-repeat;
 
+
+html {
+    background-image: url(../images/background\ dasar.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
 }
 
 
