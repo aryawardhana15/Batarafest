@@ -39,6 +39,8 @@ body{
     background-image: url(../images/background\ dasar.png);
     background-size: cover;
     background-attachment: fixed;
+    background-repeat: no-repeat;
+
 }
 
 section{
@@ -311,6 +313,7 @@ section{
         gap: 20px;
         padding: 0 10px;
     }
+
 
     
 }
