@@ -119,7 +119,7 @@ section{
 
 .header .navbar a{
     font-size: 1.7rem;
-    color:#fff;
+    color:#fffbfb;
     margin-left: 2rem;
 }
 
@@ -712,7 +712,7 @@ section{
         position: absolute;
         top:100%; left:0; right:0;
         border-top: .1rem solid #222;
-        background: linear-gradient(#0ac7c4, #187460);
+        background-color: #187460;
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     }
 
