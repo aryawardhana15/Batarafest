@@ -39,7 +39,7 @@ body{
     background-image: url(../images/background\ dasar.png);
     background-size: cover;
     background-attachment: fixed;
-    position: fixed;
+    background-attachment: -webkit-fixed; /* Menambahkan prefix untuk Safari */
     background-repeat: no-repeat;
 
 }
@@ -208,7 +208,7 @@ section{
  */
 
 
- .about .row {
+.about .row {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
