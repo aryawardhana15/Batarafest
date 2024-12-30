@@ -6,6 +6,13 @@ menu.onclick = () =>{
   navbar.classList.toggle('active');
 }
 
+if (window.innerWidth <= 768) { // Menargetkan perangkat mobile
+  document.body.style.backgroundAttachment = 'scroll'; // Ganti menjadi scroll di perangkat mobile
+} else {
+  document.body.style.backgroundAttachment = 'fixed'; // Tetap gunakan fixed di perangkat desktop
+}
+
+
 let themeToggler = document.querySelector('.theme-toggler');
 let toggleBtn = document.querySelector('.toggle-btn');
 
