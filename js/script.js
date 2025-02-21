@@ -7,8 +7,6 @@ menu.onclick = () =>{
 }
 
 
-
-
 let themeToggler = document.querySelector('.theme-toggler');
 let toggleBtn = document.querySelector('.toggle-btn');
 
